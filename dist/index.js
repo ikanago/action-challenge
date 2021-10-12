@@ -30,10 +30,8 @@ const core = __importStar(__nccwpck_require__(186));
 const wait_1 = __nccwpck_require__(817);
 async function run() {
     try {
-        //     const ms: string = core.getInput('milliseconds')
-        //     core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
         const done = await (0, wait_1.wait)(500);
-        console.log(done);
+        core.debug(done);
     }
     catch (error) {
         if (error instanceof Error) {
